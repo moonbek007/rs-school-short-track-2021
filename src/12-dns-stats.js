@@ -1,7 +1,7 @@
 function getDNSStats(domains) {
-  let answer = {};
+  const answer = {};
   for (let i = 0; i < domains.length; i++) {
-    let splitLink = domains[i].split('.');
+    const splitLink = domains[i].split('.');
     let reversedLink = '';
     for (let k = splitLink.length - 1; k >= 0; k--) {
       reversedLink += `.${splitLink[k]}`;

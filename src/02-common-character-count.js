@@ -13,7 +13,7 @@ function getCommonCharacterCount(s1, s2) {
   if (s1.length === 0 || s1.length === 0) {
     return 0;
   }
-  let answer = 0;
+  const answer = 0;
 
   for (let i = 0; i < s1.length; i++) {}
 }

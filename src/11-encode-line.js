@@ -1,13 +1,3 @@
-/**
- * Given a string, return its encoding version.
- *
- * @param {String} str
- * @return {String}
- *
- * @example
- * For aabbbc should return 2a3bc
- *
- */
 function encodeLine(str) {
   let answer = '';
   let count = 1;
@@ -46,9 +36,9 @@ function encodeLine(str) {
 
 module.exports = encodeLine;
 
-console.log(encodeLine('aabbbc'));
-console.log(encodeLine('aaaatttt'));
-console.log(encodeLine('aabbccc'));
-console.log(encodeLine('abbcca'));
-console.log(encodeLine('xyz'));
-console.log(encodeLine(''));
+// console.log(encodeLine('aabbbc'));
+// console.log(encodeLine('aaaatttt'));
+// console.log(encodeLine('aabbccc'));
+// console.log(encodeLine('abbcca'));
+// console.log(encodeLine('xyz'));
+// console.log(encodeLine(''));
