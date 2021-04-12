@@ -10,16 +10,18 @@
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
 function sortByHeight(arr) {
-  const answer = arr.sort((a, b) => {
-    // console.log(`b : ${b} a : ${a}`);
-    if (a === -1 || b === -1) {
-      return -1;
+  let answer = [...arr].sort((a, b) => a - b);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === -1) {
+      answer.splice(i, 0, -1);
+      answer.shift();
     }
-    return a - b;
-  });
+  }
   return answer;
 }
 
 module.exports = sortByHeight;
 
+// console.log(sortByHeight([23, 54, -1, 43, 1, -1, -1, 77, -1, -1, -1, 3]));
 // console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
+// console.log(sortByHeight([-1, -1, -1, -1, -1]));
