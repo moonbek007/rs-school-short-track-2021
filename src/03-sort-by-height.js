@@ -11,7 +11,7 @@
  */
 function sortByHeight(arr) {
   const answer = arr.sort((a, b) => {
-    console.log(`b : ${b} a : ${a}`);
+    // console.log(`b : ${b} a : ${a}`);
     if (a === -1 || b === -1) {
       return -1;
     }
@@ -22,4 +22,4 @@ function sortByHeight(arr) {
 
 module.exports = sortByHeight;
 
-console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
+// console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));

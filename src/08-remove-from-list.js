@@ -1,4 +1,5 @@
-function removeKFromList(l, k) {
+function removeKFromList(list, k) {
+  const l = [...list];
   const value = l[k];
   const newList = [];
   for (let i = 0; i < l.length; i++) {
