@@ -12,16 +12,19 @@
  */
 
 class Queue {
+  constructor(props) {
+    this.queue = [];
+  }
   get size() {
-    throw new Error('Not implemented');
+    return this.queue.length;
   }
 
-  enqueue(/* element */) {
-    throw new Error('Not implemented');
+  enqueue(element) {
+    this.queue.push(element);
   }
 
   dequeue() {
-    throw new Error('Not implemented');
+    return this.queue.shift();
   }
 }
 
