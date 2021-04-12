@@ -1,5 +1,5 @@
 function getEmailDomain(email) {
-  return email.match(/@[a-z0-9]+-*\.[a-z]+$/i)[0].substring(1);
+  return email.match(/@[a-z0-9-]+\.[a-z]+$/i)[0].substring(1);
 }
 
 module.exports = getEmailDomain;

@@ -1,6 +1,9 @@
+const ListNode = require('../extensions/list-node');
+
 class Queue {
   constructor() {
-    this.queue = [];
+    this.queue = new ListNode();
+    this.traverse = this.queue;
   }
 
   get size() {
@@ -8,11 +11,16 @@ class Queue {
   }
 
   enqueue(element) {
-    this.queue.push(element);
+    this.traverse.next = new ListNode();
+    this.traverse.value = element;
+    this.traverse = this.traverse.next;
   }
 
   dequeue() {
-    return this.queue.shift();
+    const answer = this.queue.value;
+    this.queue.value = this.queue.next.value;
+    this.queue.next = this.queue.next.next;
+    return answer;
   }
 }
 
